@@ -41,6 +41,7 @@ template <class T> void Array<T>::Sort() {
   }
 }
 // template <> 返回类型 类模板名<特化的数据类型>::特化成员函数名(参数表){}
+// template <> void Array<char*>::Sort(){}
 template <> void Array<char *>::Sort() {
   int p;
   for (int i = 0; i < Size - 1; i++) {
