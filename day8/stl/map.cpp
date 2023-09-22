@@ -8,6 +8,7 @@ int main(int argc, const char** argv[])
 {
     string name[] = {"张三", "李四", "王五"};
     double salary[] = {1400, 2000, 8000};
+
     map<string, double> sal;
     map<string, double>::iterator p;
     for(int i=0;i<3;++i){
@@ -35,9 +36,9 @@ int main(int argc, const char** argv[])
     map<string, double>::iterator it;
     it = sal.find(delper);
     if(it!=sal.end()){
-        cout << "find " << (*it).first << " --> " << (*it).second << endl;
+        cout << "find " << (*it).first << " --> " << (*it).second << endl;  // it是一个迭代器，指向std::pair对象；  效果同it->first
         sal.erase(it);
-        cout << "erase " << (*it).first << endl;
+        cout << "erase " << it->first << endl;
     }
 
     cout << "now map"<< endl;
