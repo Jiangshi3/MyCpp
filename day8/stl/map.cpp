@@ -6,6 +6,7 @@ using namespace std;
 
 int main(int argc, const char** argv[])
 {
+    string a = "a";
     string name[] = {"张三", "李四", "王五"};
     double salary[] = {1400, 2000, 8000};
 
