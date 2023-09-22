@@ -3,7 +3,14 @@
 using namespace std;
 
 const int MAX = 3;
-class Full{};   //  堆栈满时抛出的异常类
+//  堆栈满时抛出的异常类
+class Full{
+private:
+    int a;
+public:
+    Full(int x):a(x){};
+    int getValue(){return a;}
+};
 class Empty{};  //  堆栈空时抛出的异常类
 class Stack{
 private:
@@ -19,7 +26,7 @@ public:
 };
 void Stack::push(int x){
     if(top>=MAX-1){
-        throw Full();
+        throw Full(x);
     }
     s[++top] = x;
 }
@@ -43,14 +50,15 @@ int main(int argc, const char* argv[])
         s.push(1);
         s.push(2);
         s.push(3);
-        //s.push(4); // 将产生栈满异常
+        s.push(4); // 将产生栈满异常
         s.show();
         s.pop();
         s.pop();
         s.pop();
-        s.pop();  // 将产生栈空异常
-    }catch(Full){
+        //s.pop();  // 将产生栈空异常
+    }catch(Full e){
         cout << "Exception: Stack Full" << endl;
+        cout << "The value not push in stack:" << e.getValue() << endl;
     }catch(Empty){
         cout << "Exception: Stack Empty" << endl;
     }
