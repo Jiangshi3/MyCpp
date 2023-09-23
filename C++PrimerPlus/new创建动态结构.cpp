@@ -30,3 +30,8 @@ int main(int argc, const char* argv[])
 
     return 0;
 }
+
+/* 拷贝
+char* p = new char[strlen(temp)+1];
+strcpy(p, temp);
+*/
