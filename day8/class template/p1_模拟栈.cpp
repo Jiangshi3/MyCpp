@@ -5,7 +5,8 @@
 #include <iostream>
 using namespace std;
 
-template <class T, int MAXSIZE> class Stack{
+template <class T, int MAXSIZE> 
+class Stack{
 private:
     T elem[MAXSIZE];
     int top;
@@ -34,7 +35,8 @@ template <模板参数列表>
 返回值类型 类模板名<模板参数名表>::成员函数名 (参数列表){};
 */
 // template <class T, int MAXSIZE> void Stack<T, MAXSIZE>::push(T e) {}
-template <class T, int MAXSIZE> void Stack<T, MAXSIZE>::push(T e){
+template <class T, int MAXSIZE> 
+void Stack<T, MAXSIZE>::push(T e){
     if(full()){
         cout<< "stack full" <<endl;
         return;
@@ -42,7 +44,8 @@ template <class T, int MAXSIZE> void Stack<T, MAXSIZE>::push(T e){
     elem[++top]=e;
 }
 
-template <class T, int MAXSIZE> T Stack<T, MAXSIZE>::pop(){
+template <class T, int MAXSIZE> 
+T Stack<T, MAXSIZE>::pop(){
     if(empty()){
         cout << "stack empty" << endl;
         return 0;
