@@ -6,6 +6,10 @@
 using namespace std;
 
 #define Maxsize 5
+//使用const和enum来代替#define
+//const int Maxsize = 5; 
+// enum{Maxsize = 5};
+
 template<class T>
 class Array{
 private:
@@ -30,7 +34,7 @@ T& Array<T>::operator[](int index){
     return array[index];
 }
 
-//整数的sort()
+//整数的sort()     默认的sort，下面有对char的特化，如果是int就直接用此版本；
 template<class T>
 void Array<T>::sort(){
     int p,j;
@@ -47,7 +51,7 @@ void Array<T>::sort(){
     }
 }
 
-//字符的sort()
+//字符的sort()   这里是特化版本，如果是char的sort，就用此特化
 template<>
 void Array<char*>::sort(){
     int p, j;
