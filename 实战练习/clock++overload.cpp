@@ -23,7 +23,7 @@ Clock::Clock(int H, int M, int S){
 void Clock::ShowTime(){
     cout << Hour << ":" << Minute << ":" << Second << endl;
 }
-//时间递增一秒（重载前缀++运算符）
+//时间递增一秒（重载前缀++运算符） :返回引用
 Clock& Clock::operator++(){
     Second++;
     if(Second>=60){
@@ -39,7 +39,7 @@ Clock& Clock::operator++(){
     }
     return *this;
 }
-//时间递增一秒（重载后缀++运算符）
+//时间递增一秒（重载后缀++运算符）  :返回后缀递增之前的值
 Clock Clock::operator++(int){
     Clock temp=*this;  // 创建一个临时副本以供后缀递增使用
     ++(*this);         //调用前缀递增运算符重载
