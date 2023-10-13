@@ -1,4 +1,5 @@
-
+/*auto
+  uniform_initialization*/
 #include <iostream>
 #include <list>
 #include <vector>
@@ -8,12 +9,12 @@ using namespace std;
 int main(int argc, const char* argv[])
 {
 
-    list<int> l1{2,4,5};
+    list<int> l1{2,4,5};  // 这种初始化uniform_initialization
     list<int>::iterator ite;
     ite = find(l1.begin(), l1.end(), 2);
     auto ite1 = find(l1.begin(), l1.end(), 4);
 
-    vector<int> vec{1, 2, 3, 4, 5};
+    vector<int> vec{1, 2, 3, 4, 5};  //初始化
     for(auto &elem:vec){  // pass by reference
         elem *= 2;
     }
