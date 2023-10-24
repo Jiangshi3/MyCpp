@@ -2,10 +2,12 @@
 vec.size()
 vec.resize()
 .empty()
-push_back();
-pop_back();
-erase();
-clear();
+.push_back();
+.pop_back();
+.erase();
+.clear();
+.front();
+.back();
 */
 #include <iostream>
 #include <vector>
@@ -48,6 +50,10 @@ int main(int argc, char* argv[])
 /*删除 vector 中的元素*/
     vec1.pop_back();              // 删除末尾元素
     vec1.erase(vec1.begin()+2);   // 删除第三个元素
+
+/*查看头、尾值*/
+    cout << " front=" << vec1.front() << endl;
+    cout << " back=" << vec1.back() << endl;
 
 /*清空*/
     vec1.clear();
