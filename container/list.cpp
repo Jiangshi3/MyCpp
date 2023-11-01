@@ -5,6 +5,11 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
+    //插曲 array，其中的方法get<>();  at();
+    std::array<int, 10> Myarr{};
+    Myarr.at(3)=99;
+    cout << get<3>(Myarr) << endl;
+
 /*list容器的创建；  其他容器也是这种init；*/
 
     //1、创建一个没有任何元素的空 list 容器：    和空 array 容器不同，空的 list 容器在创建之后仍可以添加元素，
