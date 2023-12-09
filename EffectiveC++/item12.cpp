@@ -107,3 +107,12 @@ int main(){
 
     return 0;
 }
+/*
+customer(const customer& rhs)
+PriorityCustomer copy constructor
+PriorityCustomer copy assignment
+customer& operator=(const customer& rhs)
+Priority:100    name: A  Date:28
+Priority:100    name: A  Date:28
+Priority:100    name: A  Date:28
+*/
